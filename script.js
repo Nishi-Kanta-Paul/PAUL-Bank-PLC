@@ -73,7 +73,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         searchResult.textContent = message;
                     }
                 }
-            } else if (sectionId === 'withdrawSection') {
+            } else if (sectionId === 'depositSection') {
+                const accNo = document.getElementById('accNo');
+                const amount = document.getElementById('depositAmount');
+
+                if (!validateFields(accNo, amount)) {
+                    message = 'Please fill in all fields.';
+                } else {
+                    const account = accounts.find(acc => acc.number === parseInt(accNo.value));
+                    if (account) {
+                        account.balance += parseFloat(amount.value);
+                        message = `Deposited ${amount.value} to account ${accNo.value}. New balance: ${account.balance}.`;
+                    } else {
+                        message = `Account ${accNo.value} not found.`;
+                    }
+                    localStorage.setItem('accounts', JSON.stringify(accounts));
+                    updateAccountList();
+                }
+            }else if (sectionId === 'withdrawSection') {
                 const accNo = document.getElementById('withdrawAccNo');
                 const amount = document.getElementById('withdrawAmount');
 
