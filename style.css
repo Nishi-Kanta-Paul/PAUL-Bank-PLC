@@ -1,0 +1,243 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the account table */
+#accountTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#accountTable th, #accountTable td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+}
+
+#accountTable th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#accountTable tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#accountTable tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Styling for the search result box */
+.search-result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-result-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#accDetails {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+
+
+/* Apply a modern font and style the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Style the container for a modern, translucent look */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Style the main heading for better prominence */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layout for the menu buttons */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Style individual menu buttons for a modern look */
+.menu-item button {
+    padding: 15px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    position: relative;
+}
+
+/* Add hover effect to buttons for interactivity */
+.menu-item button:hover {
+    background: linear-gradient(145deg, #2575fc, #6a11cb);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Extra hover visual effect for buttons */
+.menu-item button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item button:hover::before {
+    opacity: 1;
+}
+
+/* Section display with a smooth fade-in animation */
+.section {
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    animation: fadeInUp 0.5s ease;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth fade-in effect for sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section headers with elegant typography */
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Form labels styled with better readability */
+.form-group label {
+    margin-bottom: 10px;
+    color: #ddd;
+    font-weight: 600;
+}
+
+/* Input fields with a modern translucent effect */
+.form-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s;
+}
+
+/* Input focus effect */
+.form-group input:focus {
+    border: 1px solid #3498db;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section button with hover effects */
+.section button {
+    padding: 12px 25px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Button hover effect for better interactivity */
+.section button:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Search result styling */
+#searchResult {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #27ae60;
+}

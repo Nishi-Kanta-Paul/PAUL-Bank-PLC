@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" />
+    <title>PAUL Bank PLC</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>PAUL Bank PLC</h1>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <button onclick="showSection('depositSection')">
+                    <span>Deposit</span>
+                </button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showSection('withdrawSection')">
+                    <span>Withdraw</span>
+                </button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showSection('transferSection')">
+                    <span>Transfer</span>
+                </button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showSection('accountsSection')">
+                    <span>Accounts</span>
+                </button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showSection('searchSection')">
+                    <span>Search</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Deposit Section -->
+        <div class="section" id="depositSection">
+            <h2>Deposit</h2>
+            <div class="form-group">
+                <label for="accNo">Account Number:</label>
+                <input type="text" id="accNo" placeholder="Enter Account Number" />
+            </div>
+            <div class="form-group">
+                <label for="depositAmount">Amount:</label>
+                <input type="number" id="depositAmount" placeholder="Enter Amount" />
+            </div>
+            <button>Submit</button>
+        </div>
+
+        <!-- Withdraw Section -->
+        <div class="section" id="withdrawSection">
+            <h2>Withdraw</h2>
+            <div class="form-group">
+                <label for="withdrawAccNo">Account Number:</label>
+                <input type="text" id="withdrawAccNo" placeholder="Enter Account Number" />
+            </div>
+            <div class="form-group">
+                <label for="withdrawAmount">Amount:</label>
+                <input type="number" id="withdrawAmount" placeholder="Enter Amount" />
+            </div>
+            <button>Submit</button>
+        </div>
+
+        <!-- Transfer Section -->
+        <div class="section" id="transferSection">
+            <h2>Transfer</h2>
+            <div class="form-group">
+                <label for="senderAccNo">Sender Account Number:</label>
+                <input type="text" id="senderAccNo" placeholder="Enter Sender Account Number" />
+            </div>
+            <div class="form-group">
+                <label for="receiverAccNo">Receiver Account Number:</label>
+                <input type="text" id="receiverAccNo" placeholder="Enter Receiver Account Number" />
+            </div>
+            <div class="form-group">
+                <label for="transferAmount">Amount:</label>
+                <input type="number" id="transferAmount" placeholder="Enter Amount" />
+            </div>
+            <button>Submit</button>
+        </div>
+
+        <!-- Accounts Section -->
+        <div class="section" id="accountsSection">
+            <h2>Accounts</h2>
+            <div id="accountList">
+                <h3>All Accounts</h3>
+                <table id="accountTable">
+                    <thead>
+                        <tr>
+                            <th>Account Number</th>
+                            <th>Name</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Accounts will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            <h3>Add New Account</h3>
+            <div class="form-group">
+                <label for="accName">Name:</label>
+                <input type="text" id="accName" placeholder="Enter Name" />
+            </div>
+            <div class="form-group">
+                <label for="initialDeposit">Initial Deposit Amount:</label>
+                <input type="number" id="initialDeposit" placeholder="Enter Amount" />
+            </div>
+            <button>Add Account</button>
+        </div>
+
+
+        <!-- Search Section -->
+        <div class="section" id="searchSection">
+            <h2>Search Account</h2>
+            <div class="form-group">
+                <label for="searchAccNo">Search by Account Number:</label>
+                <input type="text" id="searchAccNo" placeholder="Enter Account Number" />
+                <button>Search</button>
+            </div>
+            <div id="searchResult" class="search-result-box">
+                <!-- Account information will be displayed here -->
+                <h3>Account Details</h3>
+                <p id="accDetails">No account selected</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
